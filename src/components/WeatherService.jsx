@@ -1,17 +1,18 @@
 import { format } from "date-fns";
 import React, { useState } from "react";
-
 import { BiSearch } from "react-icons/bi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import TemperatureAndDetails from "./TemperatureAndDetails";
 import TimeLocation from "./TimeLocation";
+
 // "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=2469ed517ab38109f0124ab104977c4a";
+
 const WeatherService = () => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState([]);
 
   //   useEffect(() => {
-  //     getWeatherData( );
+  //     getWeatherData();
   //     // eslint-disable-next-line react-hooks/exhaustive-deps
   //   }, []);
 
@@ -57,7 +58,6 @@ const WeatherService = () => {
             fill="white"
             className="cursor-pointer transition ease-out hover:scale-125"
           />
-          {/* Friday, 10 Feb 2023 | Local time: 12:32 PM */}
         </div>
       </div>
       {weather.main && (

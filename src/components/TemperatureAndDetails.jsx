@@ -17,7 +17,7 @@ const TemperatureAndDetails = (props) => {
           alt=""
           className="w-20"
         />
-        <p className="text-5xl">{props.temperature}</p>
+        <p className="text-5xl">{props.temperature}°</p>
         <div className="flex flex-col space-y-2">
           <div className="flex font-light text-sm items-center justify-center">
             <CiTempHigh size={20} className="mr-1" />
