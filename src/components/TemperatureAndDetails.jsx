@@ -5,7 +5,7 @@ import { FiSun } from "react-icons/fi";
 import { BsSunset } from "react-icons/bs";
 import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
 
-function TemperatureAndDetails() {
+const TemperatureAndDetails = (props) => {
   return (
     <div>
       <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
@@ -17,45 +17,47 @@ function TemperatureAndDetails() {
           alt=""
           className="w-20"
         />
-        <p className="text-5xl">4°</p>
+        <p className="text-5xl">{props.temperature}</p>
         <div className="flex flex-col space-y-2">
           <div className="flex font-light text-sm items-center justify-center">
             <CiTempHigh size={20} className="mr-1" />
-            Real fell:<span className="font-medium ml-1">4°C</span>
+            Real fell:
+            <span className="font-medium ml-1">{props.feelsLike} ºC</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
             <BiDroplet size={20} className="mr-1" />
-            Humidity:<span className="font-medium ml-1">80%</span>
+            Humidity:<span className="font-medium ml-1">{props.humidity}%</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
             <BiWind size={20} className="mr-1" />
-            Wind Speed:<span className="font-medium ml-1">19.9km/h</span>
+            Wind Speed:
+            <span className="font-medium ml-1">{props.windSpeed}km/h</span>
           </div>
         </div>
       </div>
       <div className="flex flex-row items-center justify-center space-x-2 text-white text-sm py-3">
         <FiSun />
         <p className="font-light">
-          Sunrise:<span className="font-medium ml-1">06:00</span>
+          Sunrise:<span className="font-medium ml-1">{props.sunrise}</span>
         </p>
         <p className="font-light">|</p>
         <BsSunset />
         <p className="font-light">
-          Sunset:<span className="font-medium ml-1">17:30</span>
+          Sunset:<span className="font-medium ml-1">{props.sunset}</span>
         </p>
         <p className="font-light">|</p>
         <AiOutlineArrowUp />
         <p className="font-light">
-          High:<span className="font-medium ml-1">7°</span>
+          High:<span className="font-medium ml-1">{props.temMax}°</span>
         </p>
         <p className="font-light">|</p>
         <AiOutlineArrowDown />
         <p className="font-light">
-          Low:<span className="font-medium ml-1">3°</span>
+          Low:<span className="font-medium ml-1">{props.temMin}°</span>
         </p>
       </div>
     </div>
   );
-}
+};
 
 export default TemperatureAndDetails;
