@@ -9,11 +9,12 @@ const TemperatureAndDetails = (props) => {
   return (
     <div>
       <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
-        <p>Cloudy</p>
+        <p>{props.weatherType}</p>
+        {/* src="http://openweathermap.org/img/wn/01d@2x.png" */}
       </div>
       <div className="flex flex-row items-center justify-between text-white py-3">
         <img
-          src="http://openweathermap.org/img/wn/01d@2x.png"
+          src={`http://openweathermap.org/img/wn/${props.weatherIcon}@2x.png`}
           alt=""
           className="w-20"
         />

@@ -10,7 +10,6 @@ import TimeLocation from "./TimeLocation";
 const WeatherService = () => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState([]);
-
   //   useEffect(() => {
   //     getWeatherData();
   //     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -26,7 +25,6 @@ const WeatherService = () => {
         console.log("data ", data);
         setWeather(data);
         setCity("");
-
         console.log("weather", weather);
       } else {
         alert("Error fetching results");
@@ -64,6 +62,8 @@ const WeatherService = () => {
         <>
           <TimeLocation cityName={weather.name} country={weather.sys.country} />
           <TemperatureAndDetails
+            weatherType={weather.weather.map((weather) => weather.main)}
+            weatherIcon={weather.weather.map((weather) => weather.icon)}
             temperature={(weather.main.temp - 273.15).toFixed(2)}
             feelsLike={(weather.main.feels_like - 273.15).toFixed(2)}
             humidity={weather.main.humidity}
