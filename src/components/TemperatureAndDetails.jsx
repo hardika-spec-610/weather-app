@@ -9,12 +9,12 @@ const TemperatureAndDetails = (props) => {
   return (
     <div>
       <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
-        <p>{props.weatherType}</p>
+        <p>{props.weathertype}</p>
         {/* src="http://openweathermap.org/img/wn/01d@2x.png" */}
       </div>
       <div className="flex flex-row items-center justify-between text-white py-3">
         <img
-          src={`http://openweathermap.org/img/wn/${props.weatherIcon}@2x.png`}
+          src={`http://openweathermap.org/img/wn/${props.weathericon}@2x.png`}
           alt=""
           className="w-20"
         />
@@ -23,7 +23,7 @@ const TemperatureAndDetails = (props) => {
           <div className="flex font-light text-sm items-center justify-center">
             <CiTempHigh size={20} className="mr-1" />
             Real fell:
-            <span className="font-medium ml-1">{props.feelsLike} ºC</span>
+            <span className="font-medium ml-1">{props.feelslike} ºC</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
             <BiDroplet size={20} className="mr-1" />
@@ -32,7 +32,7 @@ const TemperatureAndDetails = (props) => {
           <div className="flex font-light text-sm items-center justify-center">
             <BiWind size={20} className="mr-1" />
             Wind Speed:
-            <span className="font-medium ml-1">{props.windSpeed}km/h</span>
+            <span className="font-medium ml-1">{props.windspeed}km/h</span>
           </div>
         </div>
       </div>
@@ -49,12 +49,12 @@ const TemperatureAndDetails = (props) => {
         <p className="font-light">|</p>
         <AiOutlineArrowUp />
         <p className="font-light">
-          High:<span className="font-medium ml-1">{props.temMax}°</span>
+          High:<span className="font-medium ml-1">{props.temmax}°</span>
         </p>
         <p className="font-light">|</p>
         <AiOutlineArrowDown />
         <p className="font-light">
-          Low:<span className="font-medium ml-1">{props.temMin}°</span>
+          Low:<span className="font-medium ml-1">{props.temmin}°</span>
         </p>
       </div>
     </div>
